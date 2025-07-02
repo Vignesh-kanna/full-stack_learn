@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sub1 = 88;
+        var sub2=78;
+        var sub3=99;
+        total=sub1+sub2+sub3;
+        Average=(sub1+sub2+sub3)/3;
+        console.log("total:",total);
+        console.log("Average:",Average);
+        let grade;
+        switch(Math.floor(Average/10))
+        {
+            case 10:
+            case 9:
+            grade="A"
+            break;
+            case 8:
+            grade="B"
+            break;
+            case 7:
+            grade="C"
+            break;
+            case 6:
+            grade="D"
+            break;
+            default:
+            grade="Fail"
+        }
+        console.log("Grade:",grade);
+        
+
+    </script>
+    <script>
+        let u=50;
+        switch(true)
+        {
+            case (u<200):
+            console.log("free");
+            break;
+            case (u>=200 && u<500):
+            console.log(u*2);
+            break;
+            case (u>=500 && u<1000):
+            console.log(u*5);
+            break;
+            case (u>=1000 && u<1500):
+            console.log(u*10);
+            break;
+            default:
+            console.log(u*20);
+        }
+    </script>
+    <script>
+        var num=2;
+        switch(true)
+        {
+            case(num==0):
+            console.log("zero")
+            break;
+            case(num>=1):
+            console.log("Positive")
+            break;
+            default:
+            console.log("Negative")
+        }
+    </script>
+    <script>
+        /* leep year using switch case */
+        var year = 2000;
+switch (true) {
+     case (year % 400 === 0):
+        console.log("Leap year");
+        break;
+    case (year % 100 === 0):
+        console.log("Not a leap year");
+        break;
+    case (year % 4 === 0):
+        console.log("Leap year");
+        break;
+    default:
+        console.log("Not a leap year");
+}
+    </script>
+    <script>
+        for(i=1;i<=5;i++)
+        {
+        console.log(i*5 );
+        console.log("");
+        }
+    </script>
+    <script>
+        var count=0
+        for(i=1;i<=50;i++)
+        {
+            if(i%2==0)
+            {
+            
+            console.log(i);
+            count++;
+            
+            }
+        }
+        console.log(count)
+    </script>
+    <script>
+        for(i=1;i<=10;i++)
+        {
+            sum=sum+i;
+            console.log(sum);
+        }
+    </script>
+    <script>
+        //factoral of a given number
+        var num=5;
+            var fact=1;
+            for(i=1;i<=num;i++) {
+                fact=fact*i;
+                document.write(fact,"<br>");
+            }
+    </script>
+</body>
+</html>

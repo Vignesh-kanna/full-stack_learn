@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="setInterval(mytime,100)">
+    
+    <p id="demo"></p>
+    <script>
+        function dateMethods()
+        {
+            var today=new Date()
+            //document.getElementById("demo").innerHTML=today;
+            //document.getElementById("demo").innerHTML=today.getFullYear();
+            //getFullYear();
+            //document.getElementById("demo").innerHTML=today.getMonth();
+            //getMonth();
+            document.getElementById("demo").innerHTML=today.getDate();
+            document.getElementById("demo").innerHTML=today.getTime();
+        }
+        function mytime()
+        {
+            var today=new Date()
+            document.getElementById("demo").innerHTML=today.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>

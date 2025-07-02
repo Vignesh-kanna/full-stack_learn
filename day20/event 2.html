@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="myfun()">
+    <h1 onmousedown="myfun()">welcome to MRU</h1>
+    Enter your name:<input type="text" name="fname" id="txt" onkeyup="onKeyFun()">
+    <h2 id="demo"></h2>
+    <script>
+        function onKeyFun()
+            {
+                var x =document.getElementById("txt");
+                document.getElementById("demo").innerHTML=x.value;
+            }
+        
+    </script>
+    
+</body>
+</html>

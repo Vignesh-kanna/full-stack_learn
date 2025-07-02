@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        spam
+        {
+            color: red;
+        }
+    </style>
+    <form action="" method="post">
+        <input type="radio" name="gender" id="male" onchange="msgHide()">Male<br>
+        <input type="radio" name="gender" id="female" onchange="msgHide()">Female<br>
+        <span id="emsg"></span>
+        <input type="submit" onclick="return valid()"><br>
+    </form>
+    <script>
+        function vaild(){
+            var m= document.getElementById("male").checked;
+            var f= document.getElementById("female").checked;
+            if(m==true)
+            {
+                alert("you are selected male!");
+            }
+            else if(f==true)
+            {
+                alert("you are selscted female");
+            }
+            else{
+                document.getElementById("emsg").innerHTML="please select any one!";
+                return false;
+            }
+        }
+        function msgHide(){
+            document.getElementById("emsg").style.display="none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="bimg" src="off.jpg" width="200px" height="200px"><br>
+    <button  onclick="valid()">ON/OFF</button>
+    <script>
+        function valid()
+        {
+            var img =document.getElementById("bimg");
+            if(img.src.match('off.webp'))
+            {
+                img.src="on.webp";
+            }
+            else{
+                img.src="off.webp"
+            }
+        }
+    </script>
+</body>
+</html>

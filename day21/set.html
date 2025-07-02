@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="heading">welcome to MRU!</h2>
+    <a href="https://www.mallareddyuniversity.ac.in/">https://www.mallareddyuniversity.ac.in</a><br>
+    <button onclick="setAttr()">set</button>
+    <p id="demo"></p>
+    <script>
+        function setAttr()
+        {
+            var x=document.getElementsByTagName("a")[0].setAttribute("href","https://www.w3schools.com/")
+        }
+    </script>
+    <style>
+        .heading
+        {
+            background-color: orangered;
+            color:aliceblue;
+            padding: 20px;
+            width : 500px;
+        }
+    </style>
+</body>
+</html>
+<body>
+    <h2>welcome to MRU</h2>
+    <button onclick="setAttr()">set</button>
+    <p id="demo"></p>
+    <script>
+        function setAttr(){
+             var x=document.getElementsByTagName("h2")[0].setAttribute("class","heading")
+        }
+    </script>
+</body>

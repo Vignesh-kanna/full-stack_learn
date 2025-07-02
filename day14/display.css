@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    background-color: rgb(72, 150, 218);
+    color: aliceblue;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+ul{
+    list-style: none;  
+}
+ul li
+{
+    
+    margin: 20px;
+    
+    
+}

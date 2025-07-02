@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Objects- real time entites,it has number of properies(key:value) and method(function)-->
+    <script>
+        //objects we can represent with inthe curly brackets {} and using 'new' keyword
+        let student={name:"vignesh",course:"webdev",fee:15000}
+        console.log(student)
+        //accessing object:
+        console.log(student.name)
+        console.log(student.course)
+        console.log(student.fee)
+        console.log(student['fee']);
+        //add key value:
+        student.admno=123;
+        console.log(student)
+        student['contact']='32323232332'
+        console.log(student)
+        //modify object:
+        student.name='sharath'
+        console.log(student)
+        student['name']='raju'
+        console.log(student)
+        //delete
+        delete student.contact;
+        delete student.admno;
+        console.log(student)
+        //get keys:
+        console.log(Object.keys(student));
+        //get values:
+        console.log(Object.values(student));
+        //get pairs like entries:
+        console.log(Object.entries(student));
+        let car={name:'bmw',color:'red',model:2025,
+    start: function()
+{
+    return "my vehicle is started";
+}};
+console.log(car.name);
+console.log(car.color);
+console.log(car.model);
+console.log(car.start());
+
+let student1={
+    name:'prashanth',course:'webdev',fee:15000,address:{dist:'warangal',pin:500045}
+}
+console.log(student1)
+console.log(student1.address.dist)
+//object using new keyword
+let obj=new Object();
+obj.a=10;
+obj.b=30;
+obj.sum=function()
+{
+    return obj.a+obj.b;
+}
+console.log(obj.a);
+console.log(obj.b);
+console.log(obj.sum());
+    </script>
+
+</body>
+</html>

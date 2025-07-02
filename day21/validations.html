@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        span {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <center><ul>JavaScript Validation</ul></center>
+    <form action="" method="post" style="max-width:400px;margin:auto;padding:24px;border:2px solid #333;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);background:#fafafa;">
+        <label>user name</label>
+        <input type="text" name="uname" id="uname" onkeypress="msgHide()">
+        <span id="x">please enter user name between 6 to 15 chars only</span><br>
+
+        <label>email id</label>
+        <input type="email" name="email" id="email" onkeypress="msgHide()">
+        <span id="emailMsg">please enter a valid email address</span><br>
+
+        <label>gender</label>
+        <input type="radio" name="gender" id="male" onchange="msgHide()">Male
+        <input type="radio" name="gender" id="female" onchange="msgHide()">Female
+        <span id="genderMsg">please select gender</span><br>
+
+        <label>phone no</label>
+        <input type="text" name="phone" id="phone" onkeypress="msgHide()">
+        <span id="phoneMsg">please enter a valid 10-digit phone number</span><br>
+
+        <label>password</label>
+        <input type="password" name="pwd" id="pwd" onkeypress="msgHide()">
+        <span id="y">please enter password between 6 to 15 chars only</span><br>
+        <label>re-password</label>
+        <input type="password" name="rpwd" id="rpwd" onkeypress="msgHide()">
+        <span id="z">passwords do not match</span><br>
+        <center><input type="submit" name="login" onclick="return valid()"></center><br>
+    </form>
+    <script>
+        var x = document.getElementById("x");
+        var y = document.getElementById("y");
+        var z = document.getElementById("z");
+        var emailMsg = document.getElementById("emailMsg");
+        var phoneMsg = document.getElementById("phoneMsg");
+        var genderMsg = document.getElementById("genderMsg");
+        function valid() {
+            var user = document.getElementById("uname").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var pass = document.getElementById("pwd").value;
+            var rpass = document.getElementById("rpwd").value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^\d{10}$/;
+            var genderMale = document.getElementById("male").checked;
+            var genderFemale = document.getElementById("female").checked;
+            msgHide();
+            if(user.length<6 || user.length>15) {
+                x.style.display="inline";
+                return false;
+            }
+            if(!emailPattern.test(email)) {
+                emailMsg.style.display="inline";
+                return false;
+            }
+            if(!genderMale && !genderFemale) {
+                genderMsg.style.display="inline";
+                return false;
+            }
+            if(!phonePattern.test(phone)) {
+                phoneMsg.style.display="inline";
+                return false;
+            }
+            if(pass.length<6 || pass.length>15) {
+                y.style.display="inline";
+                return false;
+            }
+            if(pass!=rpass) {
+                z.style.display="inline";
+                return false;
+            }
+            return true;
+        }
+        function msgHide(){
+            x.style.display="none";
+            y.style.display="none";
+            z.style.display="none";
+            if(emailMsg) emailMsg.style.display="none";
+            if(phoneMsg) phoneMsg.style.display="none";
+            if(genderMsg) genderMsg.style.display="none";
+        }
+    </script>
+</body>
+</html>

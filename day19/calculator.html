@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" name="myform">
+        <input type="button" value="9" onclick="document.myform.a.value+='9'">
+        <input type="button" value="" onclick="document.myform.a.value+='6'">
+        <input type="button" value="9" onclick="document.myform.a.value+='6'">
+        <input type="button" value="9" onclick="document.myform.a.value+='6'">
+        <input type="button" value="9" onclick="document.myform.a.value+='6'">
+        <input type="button" value="9" onclick="document.myform.a.value+='6'">  
+    </form>
+    <script>
+        //callback
+        //A callback function is a function that is passed as an argumrnt to another function, and is executed after the completion of the main  function's task.
+        /*function myfun(name, callback)
+        {
+            console.long("hello",name);
+            callback()
+        }
+        function callMe()
+        {
+            console.log("it's a callback function!")
+        }
+        myfun('siddu',callMe)*/
+        //map,filter,reduce
+        var arr=[2,3,4,5,6,7,8,9]
+
+        for(i=0;i<arr;i++){
+            console.log(arr[i]*2)
+        }
+    </script>
+</body>
+</html>

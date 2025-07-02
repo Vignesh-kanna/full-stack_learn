@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="heading">Welcome to MRU</h2>
+    <h2 class="heading">welcome tojavascript</h2>
+    <button onclick="myfun()">click</button>
+    <p id="demo"></p>
+    <script>   
+        function myfun()
+        {
+            var x= document.getElementByIdTagName("h2")[1];
+            document.getElementById("demo").innerHTML=x.innerHTML;
+        }
+    </script>
+</body>
+</html>

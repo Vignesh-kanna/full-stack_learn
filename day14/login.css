@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(103, 71, 143);   
+}
+.login{
+    width: 400px;
+    
+    background-color: white;
+    margin: 30px;
+    padding: 30px ;
+    border-radius: 10px;
+}
+.login h1{
+    text-align: center;
+}
+.login form{
+    padding:20px;
+}
+.login button{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(89, 10, 129);
+    color: white;
+    border: 10px 50px;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+.login form input{
+    width:100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10px 0px;
+}
+.login form input[type="submit"]{
+    background-color: blue;
+    color: white;
+    border:none;
+    border-radius: 5px;
+}
+.login form input :focus{
+    outline:none;
+}

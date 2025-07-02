@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="time.html" method="post">
+        <label>user name</label>
+        <input type="text" name="uname" id="uname"><br>
+        <label>password</label>
+        <input type="password" name="pwd" id="pwd"><br>
+        <label>re-password</label>
+        <input type="password" name="rpwd" id="rpwd"><br>
+        <input type="submit" name="login" onclick="valid()"><br>
+    </form>
+    <script>
+        function valid()
+        {
+            var user = document.getElementById("uname").value;
+            var pass = document.getElementById("pwd").value;
+            var rpass = document.getElementById("rpwd").value;
+            if(user.length<6 || user.length>15)
+                {
+                    alert("please enter user name between 6 to 15 char only");
+                }
+                else if(pass.length<6 || pass.length>15)
+                    {
+                        alert("please enter password between 6 to 15 char only");
+                    }
+                else if(pass!=rpass){
+                        alert("re-enter");
+                }
+        }
+    </script>
+</body>
+</html>

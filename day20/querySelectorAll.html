@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body omselectstart="return false" oncontextmenu="return false" ondragstart="return false">
+    <h2 class="heading">welcome to MRU</h2>
+    <h2 class="heading">welcome to javascript</h2>
+    <button onclick="myfum()">click</button>
+    <p id="demo"></p>
+    <script>
+        function myfun()
+        {
+            var x=document.querySelectorAll(".heading")[1];
+            document.getElementById("demo").innerHTML=x.innerHTML;
+        }
+    </script>
+</body>
+</html>

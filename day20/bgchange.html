@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="changeBg()">
+    <h1>welcome to MRU!</h1>
+    <button id="btn" onclick="changeBg()">click to change background</button>
+    <script>
+        function changeBg()
+        {
+            var r=Math.floor(Math.random()*255);
+            var g=Math.floor(Math.random()*255);
+            var b=Math.floor(Math.random()*255);
+            console.log(r,g,b);
+            var bgcolor="rgb("+r+","+g+","+b+")"
+            console.log(bgcolor)
+            document.body.style.background=bgcolor;
+            
+        }
+    </script>
+</body>
+</html>

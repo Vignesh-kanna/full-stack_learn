@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading" style="visibility: visible;">welcome to MRU!</h1>
+    <button id="btn" onclick="onHideShow()">Hide</button>
+    <script>
+        function onHideShow(){
+            var x =document.getElementById("heading");
+            if(x.style.visibility=="visible")
+            {
+                x.style.visibility="hidden";
+                document.getElementById("btn").innerHTML="Show";
+                }
+                else{
+                    x.style.visibility='visible'
+                     document.getElementById("btn").innerHTML="Hide";
+                }
+            }
+    </script>
+    
+</body>
+</html>

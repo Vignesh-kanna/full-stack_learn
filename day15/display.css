@@ -1,0 +1,97 @@
+*
+{
+    margin:0px;
+    padding: 0px;
+}
+body
+{
+    background-color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.row
+{
+    background-color: navy;
+    line-height: 80px;
+}
+.container
+{
+    width: 80%;
+    margin: 0px auto;
+}
+.row .container .logo
+{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    width:40%;
+    float: left;
+}
+.row .container .search
+{
+    float: right;
+}
+.row .container .search input
+{
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+}
+.row .search img
+{
+    position: relative;
+    left: 180px;
+    top:12px;
+}
+.row1
+{
+    background-color: #feb469;
+    padding: 30px 0px;
+}
+.row2
+{
+    background-color: #cb8e51;
+    padding: 30px 0px;
+}
+.row2 .container .img1,.img2
+{
+    color: #fff;
+    text-align: justify;
+    width: 48%;
+    float: left;
+}
+.row2 .container .img2
+{
+    float: right;
+}
+.row3
+{
+    background-color: #d8b796;
+    padding: 30px 0px;
+}
+.row3 .container .para1,.para2,.para3
+{
+    color: #fff;
+    text-align: justify;
+    line-height: 1.5;
+    padding:20px;
+    width: 28%;
+    float: left;
+    border: 2px solid white;
+    border-radius:10px;
+}
+.row3 .container .para2
+{
+    margin: 0px 10px;
+}
+.footer
+{
+    background-color: navy;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.clear
+{
+    clear: both;
+}

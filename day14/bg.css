@@ -1,0 +1,53 @@
+body
+{
+ background-image: url('landscape-nature-water-1284296.jpg');
+ background-size: 100%;
+}
+h1
+{
+    color: rgb(89, 10, 129);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: blue;
+}
+.par1{
+    background-image:url(download.webp);
+    color: brown;
+    border: 1px solid rgb(30, 208, 196);
+}
+.img1{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid black;
+
+}
+.img2{
+    width: 200px;
+    height: 200px;
+    border-radius: 0% 20px;
+    border: 2px solid black;
+    margin-left: 20px;
+}
+.img3{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px 20px;
+    border: 2px solid black;
+    margin-left: 20px;
+}
+.img4{
+    float: left;
+}
+.search{
+   display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.search input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-left: 10px;
+}

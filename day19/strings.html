@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<script>
+    let str1='s';
+    let str2="";
+    let str3="";
+    let str4="";
+    var str="Welcome to MRU";
+    console.log(str.length);
+    console.log(str.indexOf('t'));
+    console.log(str.lastIndexOf('t'));
+    console.log(str.charCodeAt(0));
+    console.log(str.slice(2,8));
+    console.log(str.split)
+    </script>*/
+    <script>
+        let str = "welcome to mru";
+        console.log(str.split("").reverse().join(""));
+    </script>
+    <script>
+        //Array:
+        //array is the group/collection of value,we can store
+        //Array 
+    </script>-->
+    <script>
+        var arr = [2,3,4,5,6,7,8,9]
+        let largest=arr[0];
+        let smallest=arr[0];
+        for(let i=1;i<arr.length;i++)
+        {
+            if(arr[i]>largest){
+                largest=arr[i];
+            }
+            if(arr[i]<smallest){
+                smallest=arr[i];
+            }
+            }
+        console.log(largest);
+        console.log(smallest);
+    </script>
+    <script>
+        let arr = [2, 3, 4, 5, 2, 6, 3, 7, 8, 9]; 
+let duplicates = [];
+
+let seen = new Set();
+for (let num of arr) {
+  if (seen.has(num)) {
+    if (!duplicates.includes(num)) {
+      duplicates.push(num);
+    }
+  } else {
+    seen.add(num);
+  }
+}
+
+console.log("Duplicate elements:", duplicates);
+    </script>
+    <script>
+        let arr = [1, 2, 3, 4];
+let stre = arr.join(",");  
+console.log(stre);
+    </script>
+    <script>
+        let str = "1,2,3,4";
+let arr = str.split(","); 
+console.log(arr); 
+    </script>
+    <script>
+        function arraysEqual(a, b) {
+  if (a.length !== b.length) return false;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return false;
+  }
+  return true;
+}
+
+let arr1 = [1, 2, 3];
+let arr2 = [1, 2, 3];
+console.log(arraysEqual(arr1, arr2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        a value is:<input type="text" name="a" id="a"><br>
+        b value is:<input type="text" name="b" id="b"><br>
+        c value is:<input type="text" name="c" id="c"><br>
+        <button type="button" onclick="Greater()">Print greatest no</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function Greater(){
+            var num1 = parseFloat(document.getElementById("a").value);
+            var num2 = parseFloat(document.getElementById("b").value);
+            var num3 = parseFloat(document.getElementById("c").value);
+            var result = "";
+            if(num1 >= num2 && num1 >= num3){
+                result = "a is greatest value";
+            } else if(num2 >= num1 && num2 >= num3){
+                result = "b is greatest value";
+            } else {
+                result = "c is greatest value";
+            }
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+</html>

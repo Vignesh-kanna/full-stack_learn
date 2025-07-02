@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    </head>
+    <body>
+     <h1>enter a table number</h1>
+    <form action="" method="post">
+        Enter a number:<input type="text" name="a" id="a">
+        <input type="submit" onclick="return calc()" value="submit"><br>
+
+    </form>
+    <h2 id="result"></h2>
+    <script>
+        function calc() {
+            var x=Number(document.getElementById("a").value);
+            var result=document.getElementById("result");
+            for (i = 1; i <=10;i++) {
+            document.write(x+"*"+i+"="+x*i+"<br>");
+        }
+        return false;
+    }
+
+
+    </script>
+    
+</body>
+</html>
