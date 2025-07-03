@@ -7,7 +7,7 @@
 </head>
 <body>
     <img id="bimg" src="off.jpg" width="200px" height="200px"><br>
-    <button  onclick="valid()">ON/OFF</button>
+    <button id="btn" onclick="valid()">ON/OFF</button>
     <script>
         function valid()
         {
@@ -15,9 +15,11 @@
             if(img.src.match('off.webp'))
             {
                 img.src="on.webp";
+                document.getElementById("btn").innerHTML="OFF";
             }
             else{
                 img.src="off.webp"
+                document.getElementById("btn").innerHTML="ON";
             }
         }
     </script>
