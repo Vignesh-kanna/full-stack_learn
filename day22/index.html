@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Intput integer with an optional leading plus(+) or minus(-) sign</p>
+    <form action="" method="post">
+        <input type="text" name="number" id="number" placeholder="Enter an integer">
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numberInput = document.getElementById('number').value;
+            const numberPattern = /^[+-]?\d+$/;
+
+            if (numberPattern.test(numberInput)) {
+                alert("Valid integer input: " + numberInput);
+            } else {
+                alert("Invalid input. Please enter a valid integer.");
+            }
+        });
+    </script>
+</body>
+</html>

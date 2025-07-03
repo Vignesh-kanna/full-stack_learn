@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <h1>welcome to MRU!</h1>
+    <button onclick="bomFun()">Open</button>
+    <p id="result"></p>
+    <script>
+        var mywin; 
+        function bomFun()
+        {
+           document.getElementById("result").innerHTML = window.screen.height;
+           document.getElementById("result").innerHTML = window.screen.width;
+           document.getElementById("result").innerHTML = window.screen.availHeight;
+           document.getElementById("result").innerHTML = window.screen.availWidth;
+           document.getElementById("result").innerHTML = window.screen.colorDepth;
+        }
+    </script>
+</body>
+</html>

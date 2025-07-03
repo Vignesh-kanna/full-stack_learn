@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <h1>welcome to MRU!</h1>
+    <button onclick="bomFun()">click</button>
+    <button onclick="bomFun2()">assign</button>
+    <p id="result"></p>
+    <script>
+        var mywin; 
+        function bomFun()
+        {
+            document.getElementById("result").innerHTML = window.location.href;
+            document.getElementById("result").innerHTML = window.location.pathname;
+            document.getElementById("result").innerHTML = window.location.hostname;
+            document.getElementById("result").innerHTML += window.location.port;
+            document.getElementById("result").innerHTML += window.location.protocol;
+        }
+        function bomFun2()
+        {
+            window.location.assign("https://www.mallareddyuniversity.ac.in/");
+        }
+    </script>
+</body>
+</html>

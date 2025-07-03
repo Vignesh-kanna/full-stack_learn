@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <h1>welcome to MRU!</h1>
+    <button onclick="bomFun()">Open</button>
+    <button onclick="bomFun2()">Close</button>
+    <script>
+        var mywin;
+        function bomFun()
+        {
+            mywin=window.open("https://www.mallareddyuniversity.ac.in/","","width=300px,hight=300px");
+            mywin.moveTo(300,200);
+        }
+        function bomFun2()
+        {
+            mywin.close();
+        }
+    </script>
+</body>
+</html>

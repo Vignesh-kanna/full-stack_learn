@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <h1>welcome popup</h1>
+    <button onclick="bomFun()">click</button>
+    <button onclick="bomFun2()">back</button>
+    <p id="result"></p>
+    <script>
+        var mywin; 
+        function bomFun()
+        {
+            var name=prompt("hello enter your name");
+            document.getElementById("result").innerHTML = name;
+        }
+        function bomFun2()
+        {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

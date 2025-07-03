@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- there should be three radio buttons by select that information it should convert into small,medium,large -->
+    
+    <form>
+        <input onclick="changeFontSize()" type="radio" name="size" value="small" id="small"> Small<br>
+        <input onclick="changeFontSize()" type="radio" name="size" value="medium" id="medium"> Medium<br>
+        <input onclick="changeFontSize()" type="radio" name="size" value="large" id="large"> Large<br>
+        
+    </form>
+    <p id="text">Hello welcome to ssslabs</p>
+    <script>
+        function changeFontSize() {
+            const textElement = document.getElementById('text');
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+
+            switch (selectedSize) {
+                case 'small':
+                    textElement.style.fontSize = '12px';
+                    break;
+                case 'medium':
+                    textElement.style.fontSize = '16px';
+                    break;
+                case 'large':
+                    textElement.style.fontSize = '20px';
+                    break;
+                default:
+                    textElement.style.fontSize = '16px'; // Default to medium
+            }
+        }
+    </script>
+</body>
+</html>

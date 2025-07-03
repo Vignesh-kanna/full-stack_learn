@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="setInterval(bomFun, 3000)">
+<!-- using set interval repeat differnet name with the help of else if -->
+
+<h1 id="heading">Vignesh</h1>
+<script>
+    function bomFun() {
+       var x=document.getElementById("heading");
+       if (x.innerHTML === "Vignesh") {
+           x.innerHTML = "Sharath";
+       } else if (x.innerHTML === "Sharath") {
+           x.innerHTML = "Bharath";
+       } else if (x.innerHTML === "Bharath") {
+           x.innerHTML = "Vignesh";
+       } 
+    }
+</script>
+</script>
+</body>
+
+</html>
