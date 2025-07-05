@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to MRU!</h1>
+    <button onclick="bom()">Click Me!</button>
+    <p id="result"></p>
+    <script>
+        function Person(name,age){
+            this.fname = 'siddu';
+            this.lname = 'kumar';
+        } 
+        Person.prototype.fullName = function() {
+            return this.fname + ' ' + this.lname;
+        }
+        function Student(){
+            this.fname = 'siddu';
+            this.lname = 'Akumar';
+        }
+        Student.prototype = Object.create(Person.prototype);
+        let p1 = new Person();
+        console.log(p1.fname); // siddu
+    </script>
+</body>
+</html>

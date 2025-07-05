@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to MRU!</h1>
+    <button onclick="bom()">Click Me!</button>
+    <p id="result"></p>
+    <script>
+        function Person()
+        {
+            this.fname='siddu';
+            this.lname='kumar';
+            this.fullName = function() {
+                return this.fname + this.lname;
+            }
+        }
+            let p1 = new Person()
+            console.log(p1.fname);
+            console.log(p1.lname);
+            console.log(p1.fullName());
+       
+    </script>
+</body>
+</html>

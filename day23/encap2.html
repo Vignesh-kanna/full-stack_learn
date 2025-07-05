@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to MRU!</h1>
+    <button onclick="bom()">Click Me!</button>
+    <p id="result"></p>
+    <script>
+        function Person(name,age){
+            var _name=name;
+            var _age=age;
+            //public method
+            this.getName=function()
+            {
+                return _name;
+            }
+            this.setName=function(newName)
+            {
+                _name=newName;
+            }
+        }
+        let p1 = new Person("Siddu", 22);
+        console.log(p1.getName()); // Siddu
+        p1.setName("Kumar");
+        console.log(p1.getName()); // Kumar
+        console.log(p1.name); // undefined (private variable)  
+       
+    </script>
+</body>
+</html>

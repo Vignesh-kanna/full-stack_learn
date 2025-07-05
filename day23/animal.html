@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to MRU!</h1>
+    <button onclick="bom()">Click Me!</button>
+    <p id="result"></p>
+    <!-- create a animal class and import dog and cat -->
+    <script>
+
+        class Animal{
+            constructor(name, type) {
+                this.name = name;
+                this.type = type;
+            }
+
+            animalInfo() {
+                return `Animal Name: ${this.name}, Type: ${this.type}`;
+            }
+
+        }
+        class Dog extends Animal {
+            constructor(name, breed) {
+                super(name, 'Dog');
+                this.breed = breed;
+            }
+
+            dogInfo() {
+                return `${this.animalInfo()}, Breed: ${this.breed}`;
+            }
+        }
+        class Cat extends Animal {
+            constructor(name, color) {
+                super(name, 'Cat');
+                this.color = color;
+            }
+
+            catInfo() {
+                return `${this.animalInfo()}, Color: ${this.color}`;
+            }
+        }
+    </script>
+</body>
+</html>

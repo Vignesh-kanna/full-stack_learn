@@ -1,0 +1,15 @@
+🧱 1. Abstraction in JavaScript
+- Abstraction means exposing only essential features and hiding the internal details.
+- JavaScript supports this using classes, where methods can abstract away complex logic.
+
+🐙 2. Polymorphism in JavaScript
+- Polymorphism lets multiple classes define different versions of the same method.
+- Achieved via method overriding in JavaScript.
+
+🔐 3. Encapsulation in JavaScript
+- Encapsulation means protecting data by restricting direct access.
+- You can use JavaScript's private fields using #
+
+🧬 4. Inheritance in JavaScript
+- Inheritance lets one class extend another and inherit its properties/methods.
+- Done using the extends keyword.

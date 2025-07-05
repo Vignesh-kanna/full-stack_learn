@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to MRU!</h1>
+    <button onclick="bom()">Click Me!</button>
+    <p id="result"></p>
+    <script>
+        function Student(name, course,fee)
+        {
+            this.name = name;
+            this.course = course;
+            this.fee = fee;
+            this.std_info = function() {
+                console.log('my name is :'+this.name+','+'course is: '+this.course+','+'fee is: '+this.fee);
+            }
+        }
+        let std1 = new Student('siddu', 'BCA', 5000);
+        std1.std_info()
+    </script>
+</body>
+</html>

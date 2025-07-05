@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to MRU!</h1>
+    <table id="demo" border="1" style="border-collapse: collapse; width: 50%;">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Fee</th>
+        </tr>
+    </table>
+    <script>
+        var students=[
+
+        {name:"jaoh",course:"python",fee:90000},
+        {name:"joh",course:"java",fee:80000},
+        {name:"johny",course:"javascript",fee:70000},
+        {name:"johny",course:"c++",fee:60000},
+        {name:"johny",course:"c#",fee:50000}
+        ];
+        for(i=0;i<students.length;i++)
+        {
+            var mydata="<tr>"+
+                "<td>" + (i+1) + "</td>" +
+                "<td>" +students[i].name +"</td>"+
+                "<td>"+students[i].course+"</td>"+
+                "<td>"+students[i].fee+"</td>"+
+                "</tr>";
+            document.getElementById("demo").innerHTML+=mydata;
+        }
+    </script>
+    <style>
+        table{
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            width: 200px;
+            margin: 20px
+        }
+    </style>
+</body>
+</html>

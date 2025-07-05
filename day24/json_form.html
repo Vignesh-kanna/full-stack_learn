@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to MRU!</h1>
+    <label>Enter Id:</label>
+    <input type="text" id="sid" name="sid"><br>
+    <label>Enter Name:</label>
+    <input type="text" id="sname" name="sname"><br>
+    <label>Enter Course:</label>
+    <input type="text" id="scourse" name="scourse"><br>
+    <label>Enter Fee:</label>
+    <input type="text" id="sfee" name="sfee"><br>
+    <input type="submit" value="Submit" onclick="jsonData()"><br>
+    <script>
+        function jsonData(){
+            var std_obj ={
+                "sid": document.getElementById("sid").value,
+                "sname": document.getElementById("sname").value,
+                "scourse": document.getElementById("scourse").value,
+                "sfee": document.getElementById("sfee").value
+            }
+            var std_arr=[];
+            std_arr.push(std_obj);
+            alert(JSON.stringify(std_arr))
+        }
+    </script>
+    <style>
+        p{
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            width: 200px;
+            margin: 20px
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to MRU!</h1>
+    <button onclick="bom()">Click Me!</button>
+    <p id="result"></p>
+    <script>
+        class Employee{
+            constructor(name, position, salary) {
+                this.name = name;
+                this.position = position;
+                this.salary = salary;
+            }
+
+            emp_info() {
+                console.log('Name:'+this.name+',Position:'+this.position+',Salary:' +this.salary);
+            }
+        }
+        let emp1 = new Employee('John Doe', 'Software Engineer', 60000);
+        emp1.emp_info();
+       
+    </script>
+</body>
+</html>

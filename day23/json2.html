@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to MRU!</h1>
+    <ul id="demo"></ul>
+    <script>
+        var students=[
+
+        {name:"jaoh",course:"python",fee:90000},
+        {name:"joh",course:"java",fee:80000},
+        {name:"johny",course:"javascript",fee:70000},
+        {name:"johny",course:"c++",fee:60000},
+        {name:"johny",course:"c#",fee:50000}
+        ];
+        for(i=0;i<students.length;i++)
+        {
+            var mydata="<li>"+ students[i].name +","+students[i].course+","+students[i].fee+"</li>";
+            document.getElementById("demo").innerHTML+=mydata;
+        }
+    </script>
+    <style>
+        p{
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            width: 200px;
+            margin: 20px
+        }
+    </style>
+</body>
+</html>

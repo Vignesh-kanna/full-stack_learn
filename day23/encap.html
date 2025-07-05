@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to MRU!</h1>
+    <button onclick="bom()">Click Me!</button>
+    <p id="result"></p>
+    <script>
+        //encapsulation
+        function Addition()
+        {
+            var c=10;
+            this.a=10;
+            this.b=20;
+            this.sum=function()
+            {
+                return this.a+this.b + c;
+            }
+        }
+        let result = new Addition();
+        console.log(result.a);
+        console.log(result.b);
+        console.log(result.sum());
+    </script>
+</body>
+</html>

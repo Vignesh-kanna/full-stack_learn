@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicle
+        {
+            start()
+            {
+                console.log("Vehicle started");
+            }
+        }
+        class Car extends Vehicle
+        {
+            start()
+            {
+                console.log("Car started");
+            }
+        }
+        class Bike extends Vehicle
+        {
+            start()
+            {
+                console.log("Bike started");
+            }
+        }
+        let car = new Car();
+        let bike = new Bike();
+        car.start(); // Output: Car started
+        bike.start(); // Output: Bike started
+    </script>
+</body>
+</html>
