@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Users</title>
+</head>
+<body>
+    <h2>Users:</h2>
+    <div id="output"></div>
+
+    <script>
+        fetch('https://www.w3schools.com/angular/customers.php')
+        .then(response => response.json())
+        .then(data => {
+            // The API returns an object with a 'records' array
+            const users = data.records;
+            let output = `<table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Country</th>
+                </tr>`;
+            for (let i = 0; i < users.length; i++) {
+                output += `<tr>
+                    <td>${users[i].Name}</td>
+                    <td>${users[i].City}</td>
+                    <td>${users[i].Country}</td>
+                </tr>`;
+            }
+            output += `</table>`;
+            document.getElementById("output").innerHTML = output;
+        })  
+        .catch(error => {
+            document.getElementById("output").innerHTML = "Failed to fetch users.";
+            console.error('Error:', error);
+        });
+    </script>
+</body>
+</html>
