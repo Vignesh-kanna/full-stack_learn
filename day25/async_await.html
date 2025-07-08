@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to MRU!</h1>
+    <script>
+        //async function always returns a Promise:
+        async function greet(){
+            return "Hello!";
+        }
+        greet().then((msg)=> console.log(msg));
+        //Using await to Wait for a Promise:
+        function getData(){
+            return new Promise((resolve, reject) => {
+                resolve("Data received!");
+            });
+        }
+        async function fetchData(){
+            const result = await getData();
+            console.log(result);
+        }
+        fetchData();
+    </script>
+    <script>
+        //error handling:
+        function getUserData(){
+            return new Promise((resolve, reject) => {
+                // Simulating an error
+                reject("User not found!");
+            });
+        }
+    </script>
+</body>
+</html>
