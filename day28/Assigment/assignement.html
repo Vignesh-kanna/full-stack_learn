@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Dynamic Multi-Event Countdown with Alerts 
+Problem Statement 
+Design and implement a Dynamic Event Countdown Web App where users can add multiple 
+upcoming events, each with a title, description, date, and time. The app should continuously 
+show countdowns to each event, allow the user to manage them, and simulate sending an email 
+reminder one day before the event. 
+Functional Requirements 
+1. Event Creation Form 
+Create a form with the following fields: 
+● Event Title (text) – required. 
+● Event Description (textarea) – optional 
+● Event Date and Time (datetime-local input) – required, must be a future datetime. 
+● Email for Reminder (email input) – optional, only if user wants reminder. 
+● Event Category/Type (dropdown) – e.g., Birthday, Meeting, Holiday, Custom 
+On submitting the form: 
+● Validate all required fields. 
+● Ensure the date/time is in the future. 
+● Add the event to a visible countdown list. 
+2. Live Countdown Display 
+For every created event: 
+● Display: 
+○ Event Title 
+○ Description 
+○ Category Icon or Colour 
+○ Countdown Timer (format: DD Days HH:MM:SS) 
+○ Email Reminder 
+● Update each countdown every second. 
+● On timer reaching zero, show: 
+○ "
+ 🎉
+ [Event Title] is happening now!" 
+3. Event Management 
+Each event card should include: 
+● Delete button – Remove event from list. Before removing a confirm popup should come. 
+● Edit button (bonus) – Allow editing details. 
+4. Simulate Email Reminder (Bonus) 
+For events with email entered: 
+● Simulate an email reminder 1 day before the event by: 
+○ Logging to console: "Reminder: '[Event Title]' is happening tomorrow. 
+Email sent to: [email]". 
+○ Optionally show a toast/alert. 
+You may simulate time fast-forwarding for demo purposes. 
+5. Persistent Storage 
+● Use localStorage to store event data so the countdowns remain after page reload. -->
+    <h1>Dynamic Multi-Event Countdown with Alerts</h1>
+    <form action="" method="post">
+        <label for="eventTitle">Event Title:</label>
+        <input type="text" id="eventTitle" name="eventTitle" required><br><br>
+
+        <label for="eventDescription">Event Description:</label>
+        <textarea id="eventDescription" name="eventDescription"></textarea><br><br>
+
+        <label for="eventDateTime">Event Date and Time:</label>
+        <input type="datetime-local" id="eventDateTime" name="eventDateTime" required><br><br>
+
+        <label for="emailReminder">Email for Reminder:</label>
+        <input type="email" id="emailReminder" name="emailReminder"><br><br>
+
+        <label for="eventCategory">Event Category/Type:</label>
+        <select id="eventCategory" name="eventCategory">
+            <option value="birthday">Birthday</option>
+            <option value="meeting">Meeting</option>
+            <option value="holiday">Holiday</option>
+            <option value="custom">Custom</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const email = document.getElementById('emailReminder').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email && !emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <div id="eventList"></div>
+
+    <script>
+        const eventList = document.getElementById('eventList');
+
+        // Function to add an event
+        function addEvent(event) {
+            const eventElement = document.createElement('div');
+            eventElement.className = 'event';
+            eventElement.innerHTML = `
+                <h2>${event.title}</h2>
+                <p>${event.description}</p>
+                <p>Category: ${event.category}</p>
+                <p>Countdown: <span class='countdown' data-time='${new Date(event.date).getTime()}'></span></p>
+                ${event.email ? `<p>Email Reminder: ${event.email}</p>` : ''}
+                <button class='delete'>Delete</button>  
+                <button class='edit'>Edit</button>
+            `;
+            eventList.appendChild(eventElement);
+            const countdownElement = eventElement.querySelector('.countdown');
+            startCountdown(countdownElement, new Date(event.date).getTime());
+            eventElement.querySelector('.delete').addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete this event?')) {
+                    eventList.removeChild(eventElement);
+                }
+            });
+            eventElement.querySelector('.edit').addEventListener('click', function() {
+                const newTitle = prompt('Edit Event Title:', event.title);
+                const newDescription = prompt('Edit Event Description:', event.description);
+                const newDate = prompt('Edit Event Date and Time (YYYY-MM-DDTHH:MM):', event.date);
+                const newEmail = prompt('Edit Email for Reminder:', event.email);
+                const newCategory = prompt('Edit Event Category/Type:', event.category);
+
+                if (newTitle && newDate) {
+                    event.title = newTitle;
+                    event.description = newDescription || '';
+                    event.date = newDate;
+                    event.email = newEmail || '';
+                    event.category = newCategory || 'custom';
+                    addEvent(event);
+                    eventList.removeChild(eventElement);
+                }
+            });
+            if (event.email) {
+                const eventDate = new Date(event.date);
+                const reminderDate = new Date(eventDate.getTime() - 24 * 60 * 60 * 1000);
+                const now = new Date();
+                if (now >= reminderDate && now < eventDate) {
+                    console.log(`Reminder: '${event.title}' is happening tomorrow. Email sent to: ${event.email}`);
+                    alert(`Reminder: '${event.title}' is happening tomorrow. Email sent to: ${event.email}`);
+                }
+            }
+        }
+        // Function to start countdown
+        function startCountdown(element, targetTime) {
+            const interval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetTime - now;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    element.innerHTML = `<strong>🎉 Event is happening now!</strong>`;
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                element.innerHTML = `${days} Days ${hours}:${minutes}:${seconds}`;
+            }, 1000);
+        }
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const title = document.getElementById('eventTitle').value;
+            const description = document.getElementById('eventDescription').value;
+            const dateTime = new Date(document.getElementById('eventDateTime').value);
+            const email = document.getElementById('emailReminder').value;
+            const category = document.getElementById('eventCategory').value;
+
+            if (title && dateTime > new Date()) {
+                const event = {
+                    title: title,
+                    description: description,
+                    date: dateTime.toISOString(),
+                    email: email,
+                    category: category
+                };
+                addEvent(event);
+                this.reset();
+            } else {
+                alert('Please fill in all required fields and ensure the date/time is in the future.');
+            }
+        });
+        // Load events from localStorage
+        window.addEventListener('load', function() {
+            const storedEvents = JSON.parse(localStorage.getItem('events')) || [];
+            storedEvents.forEach(event => addEvent(event));
+        });
+        // Save events to localStorage
+        window.addEventListener('beforeunload', function() {
+            const events = [];
+            document.querySelectorAll('.event').forEach(eventElement => {
+                const title = eventElement.querySelector('h2').innerText;
+                const description = eventElement.querySelector('p').innerText;
+                const date = eventElement.querySelector('.countdown').getAttribute('data-time');
+                const email = eventElement.querySelector('p:nth-child(4)').innerText.replace('Email Reminder: ', '');
+                const category = eventElement.querySelector('p:nth-child(3)').innerText.replace('Category: ', '');
+                events.push({ title, description, date, email, category });
+            });
+            localStorage.setItem('events', JSON.stringify(events));
+        });
+    </script>
+</body>
+</html>

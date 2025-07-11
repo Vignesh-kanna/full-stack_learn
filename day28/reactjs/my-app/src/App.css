@@ -1,0 +1,39 @@
+/* .App{
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+}
+.portfolio {
+  background-color: #133476;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px; 
+  margin: auto;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto;
+  border: 3px solid #61dafb;
+  object-fit: cover;
+}
+.circ-img {
+  width: 100%;
+  height: 100%;
+  
+}
+.footer{
+  background-color: #61dafb;
+  color: rgb(213, 198, 198);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+} */

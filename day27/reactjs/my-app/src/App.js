@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <h1>Welcome to mru</h1>
       <Sample></Sample>
-      <Sample2></Sample2> 
+      <Sample2></Sample2> cd my-app
     </div>
     
   );

@@ -1,0 +1,133 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        .event {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+        .event h2 {
+            margin: 0 0 10px;
+        }
+        .event p {
+            margin: 5px 0;
+        }
+        .event button {
+            margin-right: 5px;
+        }
+        .countdown {
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .event button.delete {
+            background-color: #d9534f;
+            color: white;
+        }
+        .event button.edit {
+            background-color: #5bc0de;
+            color: white;
+        }
+        .event button:hover {
+            cursor: pointer;
+        }
+        .event button.delete:hover {
+            background-color: #c9302c;
+        }
+        .event button.edit:hover {
+            background-color: #31b0d5;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .event-list {
+            margin-top: 20px;
+        }
+        .event-list h2 {
+            margin-top: 0;
+        }
+        .event-list p {
+            margin: 5px 0;
+        }
+        .event-list button {
+            margin-right: 5px;
+        }
+        .event-list button.delete {
+            background-color: #d9534f;
+            color: white;
+        }
+        .event-list button.edit {
+            background-color: #5bc0de;
+            color: white;
+        }
+        .event-list button:hover {
+            cursor: pointer;
+        }
+        .event-list button.delete:hover {
+            background-color: #c9302c;
+        }
+        .event-list button.edit:hover {
+            background-color: #31b0d5;
+        }
+        .event-list .countdown {
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .event-list .event {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+        .event-list .event h2 {
+            margin: 0 0 10px;
+        }
+        .event-list .event p {
+            margin: 5px 0;
+        }
+        .event-list .event button {
+            margin-right: 5px;
+        }
+        .event-list .event button.delete {
+            background-color: #d9534f;
+            color: white;
+        }
+        .event-list .event button.edit {
+            background-color: #5bc0de;
+            color: white;
+        }
+        .event-list .event button:hover {
+            cursor: pointer;
+        }
+        .event-list .event button.delete:hover {
+            background-color: #c9302c;
+        }
+        .event-list .event button.edit:hover {
+            background-color: #31b0d5;
+        }
