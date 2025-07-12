@@ -1,0 +1,158 @@
+/* style.css for Dynamic Profile Card Generator */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #d7c8c8;
+    min-height: 100vh;
+}
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px 24px 24px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.form-group label {
+    font-weight: 500;
+}
+input[type="text"], textarea, select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+input[type="text"]:focus, textarea:focus, select:focus {
+    border: 1.5px solid #0078d7;
+}
+input[type="file"] {
+    font-size: 1rem;
+}
+.form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #0078d7;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #005fa3;
+}
+#previewArea {
+    margin: 24px 0 0 0;
+}
+#cardsContainer {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.profile-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 24px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: fadeInScale 0.7s cubic-bezier(.4,2,.6,1) both;
+    transition: background 0.3s, color 0.3s;
+}
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.8) translateY(40px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.profile-card.dark {
+    background: #23272f;
+    color: #f4f4f4;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border: 4px solid #0078d7;
+    transition: border-radius 0.3s;
+}
+.profile-img.square {
+    border-radius: 8px;
+}
+.profile-img.rounded {
+    border-radius: 24px;
+}
+.profile-img.circle {
+    border-radius: 50%;
+}
+.profile-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.profile-bio {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    text-align: center;
+    color: #444;
+}
+.profile-card.dark .profile-bio {
+    color: #cfcfcf;
+}
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+.card-actions button {
+    background: #e0e0e0;
+    color: #23272f;
+    font-size: 0.95rem;
+    padding: 6px 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.card-actions button:hover {
+    background: #bdbdbd;
+}
+.profile-card.dark .card-actions button {
+    background: #353a45;
+    color: #f4f4f4;
+}
+.profile-card.dark .card-actions button:hover {
+    background: #23272f;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 12px 2vw 18px 2vw;
+    }
+    .profile-card {
+        padding: 16px 6vw 16px 6vw;
+    }
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+}
