@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Components/Home';
 import About from './Components/About';
 import Contact from './Components/Contact';
-import {Link, Route, Routes} from 'react-router-dom/dist/index.d.mts';
+import { Link, Route, Routes } from 'react-router-dom';
 // import SmartPhone from './SmartPhone';
 // import SmartPhone from './Smartphone';
 // import HeaderComponent from './HeaderComponent';
