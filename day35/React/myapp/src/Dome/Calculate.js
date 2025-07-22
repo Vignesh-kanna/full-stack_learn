@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect, useMemo } from 'react';
+function Calculate({ number }) {
+  const slowFunction = (num) => {
+    console.log('Calculating...');
+    for (let i = 0; i < 100; i++) {} 
+    return num * 2;
+  };
+  useEffect(()=>{
+    console.log("hello")
+  },[number])
+  const doubled = useMemo(() => slowFunction(number), [number]);
 
-const Calculate = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div>Result: {doubled}</div>;
 }
 
-export default Calculate
+export default Calculate;

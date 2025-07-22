@@ -1,0 +1,33 @@
+.container {
+  padding: 20px;
+  text-align: center;
+  transition: background 0.5s, color 0.5s;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+button.light {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+button.dark {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
