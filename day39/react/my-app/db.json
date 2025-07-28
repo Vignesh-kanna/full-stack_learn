@@ -1,0 +1,22 @@
+{
+  "student": [
+    {
+      "id": "ea34",
+      "name": "js",
+      "course": 14,
+      "fee": 125
+    },
+    {
+      "id": "95e0",
+      "name": "vignesh",
+      "course": "react",
+      "fee": 12
+    },
+    {
+      "id": "56d4",
+      "name": "qwerty",
+      "course": "js",
+      "fee": 12000
+    }
+  ]
+}
